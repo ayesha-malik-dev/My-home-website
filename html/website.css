@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #332c25;
+    background: #faf8f4;
+}
+
+/* Navbar - Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #fff;
+}
+
+.logo {
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.logo span,
+footer span {
+    color: #b68b5c;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #332c25;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #b68b5c;
+}
+
+.nav-btn,
+.main-btn {
+    background: #353264;
+    color: white;
+    padding: 13px 24px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.nav-btn:hover,
+.main-btn:hover {
+    background: P#281a41;
+}
+
+/* Home Section */
+.hero {
+    min-height: 600px;
+    background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("pictures/living.jpg")
+    center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-title {
+    color: #ecebea;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Common Sections */
+.section-padding {
+    padding: 90px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2,
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+/* About - Flexbox */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image {
+    width: 50%;
+    height: 400px;
+    background: url("pictures/studio.jpeg")
+    center/cover;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content p:not(.small-title) {
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: #777;
+}
+
+/* Services - CSS Grid */
+.services {
+    background: #d3cdc3;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: rgb(135, 133, 160);
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.service-img {
+    height: 260px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 22px;
+}
+
+.living {
+    background-image: url("pictures/living.jpg");
+}
+
+.bedroom {
+    background-image: url("pictures/bedroom.avif");
+}
+
+.kitchen {
+    background-image: url("pictures/kitchen.webp");
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #544d69;
+    padding: 0 12px;
+    line-height: 1.6;
+}
+
+/* Projects - CSS Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    padding: 25px;
+    color: white;
+    position: relative;
+    isolation: isolate;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.65));
+    z-index: -1;
+}
+
+.project-one {
+    background-image: url("pictures/living room.jpeg");
+}
+
+.project-two {
+    background-image: url("pictures/dream bedroom.jpeg");
+}
+
+.project-three {
+    background-image: url("pictures/dreamy kitchen.jpeg");
+}
+
+.project-four {
+    background-image: url("pictures/luxury dinnig.jpeg");
+}
+
+/* Why Choose Us */
+.why-us {
+    background: #eee8df;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.feature {
+    background: white;
+    padding: 35px 25px;
+    flex: 1;
+    border-bottom: 3px solid #b68b5c;
+}
+
+.feature h3 {
+    margin-bottom: 15px;
+}
+
+.feature p {
+    color: #777;
+    line-height: 1.7;
+}
+
+/* Contact */
+.contact-form {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    background: white;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #35325c;
+    color: white;
+    padding: 16px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #1b1c3a;
+}
+
+/* Footer */
+footer {
+    background: #272142;
+    color: white;
+    text-align: center;
+    padding: 45px 15px;
+}
+
+footer h2 {
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+footer p {
+    margin: 12px 0;
+    color: #d0c5b9;
+    line-height: 1.6;
+}
+
+/* Tablet Responsive */
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .about {
+        gap: 30px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 22px 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 40px 7%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .section-padding {
+        padding: 60px 6%;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+        height: 280px;
+    }
+
+    .about-content h2,
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .service-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-img {
+        height: 240px;
+    }
+
+    .project-card {
+        height: 260px;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+}
